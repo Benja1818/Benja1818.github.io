@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benjamín Vallejos · Portafolio</title>
+<meta name="description" content="Estudiante de Ingeniería en Informática y Técnico Medio en Telecomunicaciones. Java, Python, Linux y Windows Server.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4F7; --card:#FFFFFF; --ink:#12263A; --muted:#506072;
+  --line:#C9D3DD; --cobalt:#2457D6; --teal:#0E8F8A;
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--cobalt)}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+header.top{padding:1.25rem 0;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{font:700 1.1rem var(--head);text-decoration:none;color:var(--ink)}
+nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--cobalt)}
+.hero{padding:5rem 0 4rem}
+.hero h1{font:800 clamp(2.6rem,8vw,5.5rem)/1 var(--head);letter-spacing:-.03em;max-width:14ch}
+.hero p.lead{margin-top:1.5rem;max-width:38rem;font-size:1.2rem;color:var(--muted)}
+.btns{margin-top:2rem;display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:.5rem;font-weight:500;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--ink);color:#fff}
+.btn:hover{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.8rem,4vw,2.4rem)/1.15 var(--head);letter-spacing:-.02em;margin-bottom:.75rem}
+.sub{color:var(--muted);max-width:36rem;margin-bottom:2rem}
+
+/* Topología interactiva */
+.topo{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
+.topo svg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:1rem}
+.link{stroke:var(--line);stroke-width:2;transition:stroke .2s}
+.link.on{stroke:var(--cobalt);stroke-dasharray:6 6;animation:flow .8s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-12}}
+.node{cursor:pointer}
+.node rect{fill:var(--card);stroke:var(--ink);stroke-width:2;transition:fill .2s}
+.node text{font:500 15px var(--body);fill:var(--ink);text-anchor:middle;pointer-events:none;transition:fill .2s}
+.node:hover rect,.node.on rect{fill:var(--cobalt);stroke:var(--cobalt)}
+.node:hover text,.node.on text{fill:#fff}
+.core rect{fill:var(--ink);stroke:var(--ink)}
+.core text{fill:#fff;font:700 16px var(--head)}
+.panel{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:.5rem;padding:1.5rem;min-height:11rem}
+.panel h3{font:700 1.4rem var(--head);margin-bottom:.5rem}
+.panel p{color:var(--muted)}
+.hint{margin-top:.75rem;font-size:.95rem;color:var(--muted)}
+
+/* Experiencia y proyectos */
+.job{background:var(--card);border:1px solid var(--line);border-radius:.75rem;padding:1.75rem}
+.job h3{font:700 1.3rem var(--head)}
+.job .who{color:var(--muted);margin-bottom:1rem}
+.job ul{padding-left:1.25rem}
+.job li{margin:.4rem 0}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.proj article{border:2px dashed var(--line);border-radius:.75rem;padding:1.5rem}
+.proj h3{font:700 1.15rem var(--head);margin-bottom:.4rem}
+.proj p{color:var(--muted);font-size:1rem}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .topo{grid-template-columns:1fr}
+  nav a{margin:0 1rem 0 0}
+  .hero{padding:3rem 0 2.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .link.on{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio">Benjamín Vallejos</a>
+    <nav aria-label="Principal">
+      <a href="#manejo">Lo que manejo</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="wrap hero">
+    <h1>Código y redes, en el mismo equipo.</h1>
+    <p class="lead">Soy Benjamín, estudiante de Ingeniería en Informática y Técnico Medio en Telecomunicaciones. Programo en Java y Python, trabajo con Linux y Windows Server, y hice mi práctica en soporte informático en Duoc. Busco mi primera oportunidad junior.</p>
+    <div class="btns">
+      <a class="btn main" href="#contacto">Contáctame</a>
+      <a class="btn" href="https://github.com/Benja1818">Ver mi GitHub</a>
+    </div>
+  </div>
+
+  <section id="manejo">
+    <div class="wrap">
+      <h2>Lo que manejo</h2>
+      <p class="sub">Cada equipo de la red es una parte de mi formación. Toca uno para ver de qué se trata.</p>
+      <div class="topo">
+        <div>
+          <svg viewBox="0 0 600 340" role="group" aria-label="Mapa de mis habilidades conectadas a mi nombre">
+            <g id="links">
+              <line class="link" data-k="java" x1="300" y1="170" x2="95" y2="65"/>
+              <line class="link" data-k="python" x1="300" y1="170" x2="95" y2="275"/>
+              <line class="link" data-k="linux" x1="300" y1="170" x2="505" y2="65"/>
+              <line class="link" data-k="win" x1="300" y1="170" x2="505" y2="275"/>
+              <line class="link" data-k="web" x1="300" y1="170" x2="300" y2="40"/>
+              <line class="link" data-k="redes" x1="300" y1="170" x2="300" y2="300"/>
+            </g>
+            <g class="node core"><rect x="235" y="148" width="130" height="44" rx="10"/><text x="300" y="176">Benjamín</text></g>
+            <g class="node" data-k="java" tabindex="0" role="button" aria-label="Java"><rect x="45" y="46" width="100" height="38" rx="8"/><text x="95" y="71">Java</text></g>
+            <g class="node" data-k="python" tabindex="0" role="button" aria-label="Python"><rect x="45" y="256" width="100" height="38" rx="8"/><text x="95" y="281">Python</text></g>
+            <g class="node" data-k="linux" tabindex="0" role="button" aria-label="Linux"><rect x="455" y="46" width="100" height="38" rx="8"/><text x="505" y="71">Linux</text></g>
+            <g class="node" data-k="win" tabindex="0" role="button" aria-label="Windows Server"><rect x="440" y="256" width="130" height="38" rx="8"/><text x="505" y="281">Windows Server</text></g>
+            <g class="node" data-k="web" tabindex="0" role="button" aria-label="HTML y CSS"><rect x="245" y="21" width="110" height="38" rx="8"/><text x="300" y="46">HTML + CSS</text></g>
+            <g class="node" data-k="redes" tabindex="0" role="button" aria-label="Redes"><rect x="250" y="281" width="100" height="38" rx="8"/><text x="300" y="306">Redes</text></g>
+          </svg>
+        </div>
+        <div>
+          <div class="panel" aria-live="polite">
+            <h3 id="p-title">Elige un equipo</h3>
+            <p id="p-text">Toca cualquier punto del mapa para ver cómo lo uso.</p>
+          </div>
+          <p class="hint">También funciona con el teclado: Tab y Enter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="wrap">
+      <h2>Experiencia</h2>
+      <div class="job">
+        <h3>Practicante de soporte informático</h3>
+        <p class="who">Duoc</p>
+        <ul>
+          <li>Atención y resolución de incidencias de hardware y software.</li>
+          <li>Mantenimiento y configuración de equipos y usuarios.</li>
+          <li>Creación de inventarios de componentes electrónicos.</li>
+          <li>Soporte en redes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="wrap">
+      <h2>Proyectos</h2>
+      <p class="sub">Estoy construyendo mis primeros proyectos. Cuando estén listos, aparecerán aquí con enlace al código.</p>
+      <div class="proj">
+        <article><h3>Aplicación en Java</h3><p>Un programa con base de datos, pensado para practicar lo que aprendo en la carrera.</p></article>
+        <article><h3>Script para soporte</h3><p>Automatización en Python de tareas repetitivas, como respaldos o inventarios.</p></article>
+        <article><h3>Guías de laboratorio</h3><p>Documentación paso a paso de configuraciones en Linux y Windows Server.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <h2>Contacto</h2>
+      <p class="sub">Si tienes una práctica, un trabajo junior o un proyecto en equipo, escríbeme.</p>
+      <div class="btns">
+        <a class="btn main" href="mailto:benja489345@gmail.com">benja489345@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/benjam%C3%ADn-vallejos-341334360/">LinkedIn</a>
+        <a class="btn" href="https://github.com/Benja1818">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Benjamín Isaac Vallejos Jara</div></footer>
+
+<script>
+const info={
+  java:["Java","Lenguaje que estoy aprendiendo en la carrera. Mi próximo paso es construir una aplicación completa y subirla a GitHub."],
+  python:["Python","Lo manejo para programar. Quiero usarlo en scripts que automaticen tareas de soporte, como respaldos e inventarios."],
+  linux:["Linux","Parte de mi formación en sistemas operativos. Voy documentando mis prácticas en la terminal."],
+  win:["Windows Server","Parte de mi formación en sistemas operativos. Estoy aprendiendo a administrar usuarios y servicios."],
+  web:["HTML + CSS","Mi base en desarrollo web. Esta misma página es mi primer sitio publicado."],
+  redes:["Redes","Mi punto de partida: Técnico Medio en Telecomunicaciones y soporte en redes durante mi práctica en Duoc."]
+};
+const nodes=document.querySelectorAll('.node[data-k]'),links=document.querySelectorAll('.link');
+function pick(k){
+  nodes.forEach(n=>n.classList.toggle('on',n.dataset.k===k));
+  links.forEach(l=>l.classList.toggle('on',l.dataset.k===k));
+  document.getElementById('p-title').textContent=info[k][0];
+  document.getElementById('p-text').textContent=info[k][1];
+}
+nodes.forEach(n=>{
+  n.addEventListener('click',()=>pick(n.dataset.k));
+  n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(n.dataset.k)}});
+});
+</script>
+</body>
+</html>

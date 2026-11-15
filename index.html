@@ -222,3 +222,34 @@
             } else {
                 audio.pause();
                 playPauseBtn.textContent = '▶';
+                playPauseBtn.classList.remove('active');
+                ledStatus.classList.remove('playing');
+            }
+        });
+
+        prevBtn.addEventListener('click', () => { audio.currentTime = 0; });
+        nextBtn.addEventListener('click', () => { audio.currentTime = 0; });
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressFill.style.width = percent + '%';
+            }
+        });
+
+        progressContainer.addEventListener('click', (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            if (audio.duration) {
+                audio.currentTime = (clickX / width) * audio.duration;
+            }
+        });
+
+        volSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            audio.volume = val / 100;
+            volText.textContent = val + '%';
+        });
+    </script>
+</body>
+</html>
